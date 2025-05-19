@@ -6,17 +6,19 @@ import { RouterModule } from "@angular/router";
   imports: [RouterModule],
   template: `
     <main>
-      <header class="brand-name">
-        <img
-          class="brand-logo"
-          src="/assets/logo.svg"
-          alt="logo"
-          aria-hidden="true"
-        />
-      </header>
+      <a [routerLink]="['/']">
+        <header class="brand-name">
+          <img
+            class="brand-logo"
+            src="/assets/logo.svg"
+            alt="logo"
+            aria-hidden="true"
+          />
+        </header>
+      </a>
 
       <section class="content">
-        <router-outlet></router-outlet>
+       src/app/details/details-component.css
       </section>
     </main>
   `,
