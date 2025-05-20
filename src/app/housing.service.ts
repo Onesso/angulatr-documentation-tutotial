@@ -6,7 +6,6 @@ import { HousingLocation } from "./housing-location-interface";
   providedIn: "root",
 })
 export class HousingService {
-
   readonly baseUrl = "https://angular.dev/assets/images/tutorials/common";
 
   housingLocationList: HousingLocation[] = [
@@ -122,4 +121,9 @@ export class HousingService {
     );
   }
 
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(
+      `Home application received: first name: ${firstName}, last name: ${lastName}, email: ${email}`
+    );
+  }
 }
