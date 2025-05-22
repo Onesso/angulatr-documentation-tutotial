@@ -38,10 +38,12 @@ export class HomeComponent {
   filteredLocationList: HousingLocation[] = [];
 
   constructor() {
-    this.housingLocationList =
-      this.housingServiceInstatnce.getAllHousingLocations();
-
-    this.filteredLocationList = this.housingLocationList;
+    this.housingServiceInstatnce
+      .getAllHousingLocations()
+      .then((housingLocationList: HousingLocation[]) => {
+        this.housingLocationList = housingLocationList;
+        this.filteredLocationList = this.housingLocationList;
+      });
   }
 
   // this function will take a string of what we want to search.

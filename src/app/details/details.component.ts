@@ -60,7 +60,9 @@ export class DetailsComponent {
 
   constructor() {
     const housingLocationId = parseInt(this.route.snapshot.params["id"], 10);
-    this.Data = this.HousingService.getHousingLocationById(housingLocationId);
+
+    this.HousingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
+      this.Data = housingLocation});
   }
 
   //apply on click.
